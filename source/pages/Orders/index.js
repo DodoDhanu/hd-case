@@ -12,17 +12,16 @@ console.log(ordersjson)
 const Orders = () => {
     return (
         <SafeAreaView style={{ backgroundColor: '#FFF', flex: 1 }}>
-            <ScrollView>
-            {/* <Text>{ordersjson[0].orderID}</Text>
-            <Text>{ordersjson[0].orderStatus}</Text>
-            <Text>{ordersjson[0].pharmacyName}</Text>
-            <Text>{ordersjson[0].orderTotal}</Text> */}
+                    <View style={{marginLeft:25, marginBottom: 15}}>
+            <Text style={{fontSize: 17, fontWeight: 'bold'}}>Pending Orders</Text>
+        </View>  
+            <ScrollView> {/*Loop */}
             {
                 ordersjson.map((order) => { 
                     return(                
-                    <>
-                        <SubmittedOrders key={order.orderID} order={order}/> 
-                    </>)
+                    <View key={order.orderID}>
+                        <SubmittedOrders  order={order}/> 
+                    </View>)
 
 
                 }

@@ -15,9 +15,7 @@ console.log(ordersjson);
 
         <View>    
 
-        <View style={{marginLeft:25, marginBottom: 15}}>
-            <Text style={{fontSize: 17, fontWeight: 'bold'}}>Pending Orders</Text>
-        </View>  
+
 
         <View style={styles.container}>
             
