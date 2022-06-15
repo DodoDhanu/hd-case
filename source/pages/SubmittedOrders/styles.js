@@ -29,6 +29,22 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         marginTop: 5,
+    },
+    Image: {
+        flex: 1,
+        height: 50,
+        width: 50,
+        alignItems: 'center',
+    },
+    ButtonOrders: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-evenly',
+        marginBottom: 40,
+        borderColor: '#F1F5F5',
+    
+
+        
     }
 
 });
