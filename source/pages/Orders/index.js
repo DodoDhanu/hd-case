@@ -16,20 +16,24 @@ const Orders = () => {
     return (
         <SafeAreaView style={{ backgroundColor: '#FFF', flex: 1 }}>
 
+            {/* 'Open Orders' Button:*/}
             <View style={styles.ButtonOrders}>
             <View>
              <Button disabled color = "#F1F5F5" title ="Open Orders" />
             </View>
 
+            {/* 'Submitted Orders' Button:*/}
             <View>
              <Button color = "#F1F5F5"  title ="Submitted Orders" />
             </View>
             </View>
 
+            {/* Pending orders title:*/}
             <View style={{ marginLeft: 25, marginBottom: 15 }}>
                 <Text style={{ fontSize: 17, fontWeight: 'bold' }}>Pending Orders</Text>
             </View>
 
+            {/* map function used to display orders from json file:*/}
             <ScrollView>
                 {
                     ordersjson.map((order) => {

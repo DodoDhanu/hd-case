@@ -1,7 +1,6 @@
 import * as React from 'react';
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import { NavigationContainer, TabActions, useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import TabNavigation from './TabNavigation';
 import { ScreenStackHeaderBackButtonImage } from 'react-native-screens';
@@ -14,23 +13,30 @@ console.log(Image);
 
 const Stack = createNativeStackNavigator();
 
-
+{/*Creation of Navigation Header */}
 const Router = () => {
     return(
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen name="Ordersssss"
+                <Stack.Screen name="NavigationHeader"
                 component={TabNavigation} 
                 options={{
-                    headerTitle: () => (
-                        
-                        <Image
-                             style={styles.Image} 
-                             source = {require('/Users/dhanudhardas/Documents/dev/HealthDart/case/hd-case/assets/svg/logo.svg')}
-                        />
-                    )
+                    title: 'Order'
                  }}
+                 size = {30}
                 />
+
+                <Stack.Screen name="BackButton"
+                    component={TabNavigation}
+                    options={{
+                        headerTitle: () => {
+                            <Image source= {require("/Users/dhanudhardas/Documents/dev/HealthDart/case/hd-case/assets/svg/back-arrow.svg")}
+                            />
+                        }
+                    }}
+                    size={30}
+                />
+
             </Stack.Navigator>
         </NavigationContainer>
     )

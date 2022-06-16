@@ -10,6 +10,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Providers from './source/providers/Providers';
 
 
+{/*Coding of various components seperated into their own scrpts*/}
+{/* Function returns data from various components */}
 function App() {
   return (
     <>

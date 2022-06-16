@@ -9,12 +9,16 @@ import Consult from '../pages/Consult';
 import Orders from '../pages/Orders';
 import Profile from '../pages/Profile';
 
+
 const TabNavigation = () => {
 
     const Tab = createBottomTabNavigator();
 
+    //Buttons and labelling of bottom tab navgator:
     return(
         <Tab.Navigator>
+
+            {/* Home-page Button */}
             <Tab.Screen 
             name="Home" 
             component={Home} 
@@ -24,6 +28,8 @@ const TabNavigation = () => {
                 )   
             }}
             /> 
+
+            {/* Consult-page Button */}
             <Tab.Screen 
             name="Consult"
             component={Consult} 
@@ -33,6 +39,8 @@ const TabNavigation = () => {
                 )   
             }}
             />
+
+            {/* Order-page Button */}
             <Tab.Screen 
             name="Orders" 
             component={Orders} 
@@ -42,6 +50,8 @@ const TabNavigation = () => {
                 )   
             }}
             />
+
+            {/* Profile-page Button */}
             <Tab.Screen 
             name="Profile"
             component={Profile} 
