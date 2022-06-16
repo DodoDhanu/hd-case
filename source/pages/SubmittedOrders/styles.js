@@ -42,9 +42,12 @@ const styles = StyleSheet.create({
         justifyContent: 'space-evenly',
         marginBottom: 40,
         borderColor: '#F1F5F5',
-    
+    },
+    NavigationHeaderContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-evenly',
 
-        
     }
 
 });

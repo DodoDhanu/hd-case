@@ -2,40 +2,29 @@ import * as React from 'react';
 import { NavigationContainer, TabActions, useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import TabNavigation from './TabNavigation';
-import { ScreenStackHeaderBackButtonImage } from 'react-native-screens';
 import styles from '/Users/dhanudhardas/Documents/dev/HealthDart/case/hd-case/source/pages/SubmittedOrders/styles.js';
 
 
-import {Image} from 'react-native' ;
-console.log(Image); 
+import { View, Text, Image } from 'react-native';
+import logo from '/Users/dhanudhardas/Documents/dev/HealthDart/case/hd-case/assets/svg/logo.svg';
+import blackArrow from '/Users/dhanudhardas/Documents/dev/HealthDart/case/hd-case/assets/svg/back-arrow.svg';
+console.log(Image);
 
 
 const Stack = createNativeStackNavigator();
 
-{/*Creation of Navigation Header */}
+{/*Creation of Navigation Header */ }
 const Router = () => {
-    return(
+    return (
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen name="NavigationHeader"
-                component={TabNavigation} 
-                options={{
-                    title: 'Order'
-                 }}
-                 size = {30}
-                />
 
-                <Stack.Screen name="BackButton"
-                    component={TabNavigation}
-                    options={{
-                        headerTitle: () => {
-                            <Image source= {require("/Users/dhanudhardas/Documents/dev/HealthDart/case/hd-case/assets/svg/back-arrow.svg")}
-                            />
-                        }
-                    }}
-                    size={30}
-                />
+                <View style={styles.NavigationHeaderContainer}>
+                    <Image source={{ blackArrow }} style={{ width: 30, height: 30 }} />
+                    <Image source={{ logo }} style={{ width: 30, height: 30 }} />
+                    <Text style={{ color: 'black' }}>Orders</Text>
+                </View>
+
 
             </Stack.Navigator>
         </NavigationContainer>
