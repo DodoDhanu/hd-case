@@ -1,13 +1,11 @@
 import * as React from 'react';
 import MaterialCommunityIcons  from 'react-native-vector-icons/MaterialCommunityIcons';
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import Home from '../pages/Home';
-import Consult from '../pages/Consult';
-import Orders from '../pages/Orders';
-import Profile from '../pages/Profile';
+import Home from '../components/Home';
+import Consult from '../components/Consult';
+import Orders from '../components/Orders';
+import Profile from '../components/Profile';
 
 
 const TabNavigation = () => {
@@ -51,7 +49,7 @@ const TabNavigation = () => {
             }}
             />
 
-            {/* Profile-page Button */}
+            {/* -page Button */}
             <Tab.Screen 
             name="Profile"
             component={Profile} 

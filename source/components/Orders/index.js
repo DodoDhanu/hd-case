@@ -5,7 +5,7 @@ import SubmittedOrders from '../SubmittedOrders';
 
 import ordersjson from '../../../assets/data/orders.json'
 import { ScrollView } from 'react-native-gesture-handler';
-import styles from '/Users/dhanudhardas/Documents/dev/HealthDart/case/hd-case/source/pages/SubmittedOrders/styles.js';
+import styles from '../SubmittedOrders/styles.js';
 import { Button } from 'react-native'
 
 
